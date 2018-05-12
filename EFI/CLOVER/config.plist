@@ -247,6 +247,8 @@
 			<string>SSDT-12.aml</string>
 			<string>SSDT-13.aml</string>
 			<string>SSDT-PNLF.aml</string>
+			<string>SSDT-RMCF.aml</string>
+			<string>SSDT-CPUS.aml</string>
 		</array>
 	</dict>
 	<key>Boot</key>
