@@ -10,8 +10,6 @@
 		<string>Disable other forms of CPU PM due to SSDT/Generate/PluginType=true</string>
 		<key>DSDT</key>
 		<dict>
-			<key>DropOEM_DSM</key>
-			<true/>
 			<key>Fixes</key>
 			<dict>
 				<key>Comment-IRQ Fix</key>
@@ -197,6 +195,12 @@
 				</dict>
 			</array>
 		</dict>
+		<key>DisabledAML</key>
+		<array>
+			<string>SSDT.aml</string>
+			<string>SSDT-XCPM.aml</string>
+			<string>SSDT-PluginType1.aml</string>
+		</array>
 		<key>DropTables</key>
 		<array>
 			<dict>
@@ -230,31 +234,13 @@
 			<key>NoOemTableId</key>
 			<true/>
 		</dict>
-		<key>SortedOrder</key>
-		<array>
-			<string>SSDT-0.aml</string>
-			<string>SSDT-1.aml</string>
-			<string>SSDT-2.aml</string>
-			<string>SSDT-3.aml</string>
-			<string>SSDT-4.aml</string>
-			<string>SSDT-5.aml</string>
-			<string>SSDT-6.aml</string>
-			<string>SSDT-7.aml</string>
-			<string>SSDT-8.aml</string>
-			<string>SSDT-9.aml</string>
-			<string>SSDT-10.aml</string>
-			<string>SSDT-11.aml</string>
-			<string>SSDT-12.aml</string>
-			<string>SSDT-13.aml</string>
-			<string>SSDT-PNLF.aml</string>
-		</array>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>-lilubeta nv_disable=1 dart=0 kext-dev-mode=1 -disablegfxfirmware -igfxbeta</string>
+		<string>dart=0 nv_disable=1 -igfxbeta -v -disablegfxfirmware kext-dev-mode=1 -lilubeta</string>
 		<key>Debug</key>
 		<false/>
 		<key>NeverHibernate</key>
@@ -442,7 +428,7 @@
 		<key>ScreenResolution</key>
 		<string>1920x1080</string>
 		<key>Theme</key>
-		<string>embedded</string>
+		<string>random</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -554,24 +540,6 @@
 				AAAA
 				</data>
 			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>change F%uT%04x to F%uTxxxx in AppleBacklightInjector.kext (credit RehabMan)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				RiV1VCUwNHgA
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleBacklight</string>
-				<key>Replace</key>
-				<data>
-				RiV1VHh4eHgA
-				</data>
-			</dict>
 		</array>
 	</dict>
 	<key>RtVariables</key>
@@ -583,10 +551,48 @@
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
+		<key>BiosReleaseDate</key>
+		<string>02/08/2018</string>
+		<key>BiosVendor</key>
+		<string>Apple Inc.</string>
+		<key>BiosVersion</key>
+		<string>MBP143.88Z.0173.B00.1802080917</string>
+		<key>Board-ID</key>
+		<string>Mac-551B86E5744E2388</string>
+		<key>BoardManufacturer</key>
+		<string>Apple Inc.</string>
+		<key>BoardSerialNumber</key>
+		<string>C02722300CDDP00JC</string>
+		<key>BoardType</key>
+		<integer>10</integer>
+		<key>BoardVersion</key>
+		<string>1.0</string>
+		<key>ChassisAssetTag</key>
+		<string>MacBook-Aluminum</string>
+		<key>ChassisManufacturer</key>
+		<string>Apple Inc.</string>
+		<key>ChassisType</key>
+		<string>0x09</string>
+		<key>Family</key>
+		<string>MacBook Pro</string>
+		<key>FirmwareFeatures</key>
+		<string>0xFC0FE13F</string>
+		<key>FirmwareFeaturesMask</key>
+		<string>0xFF1FFF3F</string>
+		<key>LocationInChassis</key>
+		<string>Part Component</string>
+		<key>Manufacturer</key>
+		<string>Apple Inc.</string>
+		<key>Mobile</key>
+		<true/>
+		<key>PlatformFeature</key>
+		<string>0x1A</string>
 		<key>ProductName</key>
 		<string>MacBookPro14,3</string>
-		<key>Trust</key>
-		<true/>
+		<key>SerialNumber</key>
+		<string>C02TT2BMHTD5</string>
+		<key>Version</key>
+		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
