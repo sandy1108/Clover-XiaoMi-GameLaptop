@@ -552,6 +552,24 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>Change VRAM 1536 -&gt; 2048 for 0x591b0000</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				AAAAYGwFAABsBQAAAAAA
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>AppleIntelKBLGraphicsFramebuffer</string>
+				<key>Replace</key>
+				<data>
+				AAAAgGwFAABsBQAAAAAA
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>change F%uT%04x to F%uTxxxx in AppleBacklightInjector.kext (credit RehabMan)</string>
 				<key>Disabled</key>
 				<false/>
