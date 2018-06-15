@@ -16,7 +16,9 @@
 // portType=4 is used by MacBookPro8,3 (reason/purpose unknown)
 //
 
-// Modified by wsgh, customize
+// SSDT-UIAC-XiaoMiGameBookTop.dsl
+//
+// Modified by wsgh, customize for XiaoMiGameBook(Top Version)
 
 DefinitionBlock ("", "SSDT", 2, "hack", "UIAC-ALL", 0)
 {
