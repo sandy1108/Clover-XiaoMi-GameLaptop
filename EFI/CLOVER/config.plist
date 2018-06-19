@@ -383,6 +383,7 @@
 	<key>DisableDrivers</key>
 	<array>
 		<string>VBoxHfs</string>
+		<string>CsmVideoDxe</string>
 	</array>
 	<key>GUI</key>
 	<dict>
