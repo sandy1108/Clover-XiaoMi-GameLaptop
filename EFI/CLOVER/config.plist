@@ -25,6 +25,8 @@
 				<key>FixTMR</key>
 				<false/>
 			</dict>
+			<key>Name</key>
+			<string>DSDT.aml</string>
 			<key>Patches</key>
 			<array>
 				<dict>
@@ -213,7 +215,7 @@
 					<key>Comment</key>
 					<string>change PCI0.I2C0.TPD0._CSR to XCSR</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					FDNfQ1JTAKAO
@@ -228,6 +230,7 @@
 		<key>DisabledAML</key>
 		<array>
 			<string>SSDT-DDGPU.aml</string>
+			<string>SSDT-I2C0.TPD0._CSR.aml</string>
 		</array>
 		<key>DropTables</key>
 		<array>
