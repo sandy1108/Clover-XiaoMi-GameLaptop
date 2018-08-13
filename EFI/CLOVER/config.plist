@@ -231,6 +231,7 @@
 		<array>
 			<string>SSDT-DDGPU.aml</string>
 			<string>SSDT-I2C0.TPD0._CSR.aml</string>
+			<string>SSDT-UIAC-XiaoMiGameBookTop.aml</string>
 		</array>
 		<key>DropTables</key>
 		<array>
@@ -273,6 +274,7 @@
 			<string>SSDT-GPI0._STA.aml</string>
 			<string>SSDT-I2C0.TPD0._CSR.aml</string>
 			<string>SSDT-UIAC-XiaoMiGameBookTop.aml</string>
+			<string>SSDT-UIAC-XiaoMiGameBookTop-DisableBluetooth.aml</string>
 			<string>SSDT-PNLF.aml</string>
 			<string>SSDT-ALS0.aml</string>
 			<string>SSDT-CPUS.aml</string>
