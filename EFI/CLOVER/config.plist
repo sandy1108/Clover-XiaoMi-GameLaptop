@@ -288,6 +288,8 @@
 		<string>-lilubeta dart=0 nvda_drv=1 kext-dev-mode=1 -disablegfxfirmware -igfxbeta</string>
 		<key>Debug</key>
 		<false/>
+		<key>DefaultVolume</key>
+		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>Secure</key>
