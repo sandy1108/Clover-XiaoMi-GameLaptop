@@ -284,7 +284,7 @@
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>-igfxbeta nv_disable=1 dart=0 kext-dev-mode=1 -disablegfxfirmware -lilubeta</string>
+		<string>-lilubeta nv_disable=1 dart=0 kext-dev-mode=1 -disablegfxfirmware -igfxbeta</string>
 		<key>Debug</key>
 		<false/>
 		<key>NeverHibernate</key>
@@ -417,8 +417,8 @@
 	</dict>
 	<key>DisableDrivers</key>
 	<array>
-		<string>CsmVideoDxe</string>
 		<string>VBoxHfs</string>
+		<string>CsmVideoDxe</string>
 	</array>
 	<key>GUI</key>
 	<dict>
@@ -493,7 +493,7 @@
 			<key>Intel</key>
 			<true/>
 			<key>NVidia</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>ig-platform-id</key>
 		<string>0x591b0000</string>
@@ -745,8 +745,6 @@
 	<dict>
 		<key>InjectKexts</key>
 		<string>Detect</string>
-		<key>NvidiaWeb</key>
-		<false/>
 	</dict>
 </dict>
 </plist>
