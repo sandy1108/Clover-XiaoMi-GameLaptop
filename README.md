@@ -58,3 +58,39 @@
 - 偶现一次-v启动系统时卡在waiting for DSMOS无法进入系统，重启就好了，再也没有复现过，是一个隐患，待解决
 - 内置蓝牙可以显示，但是搜不到设备，Airdrop不可用，故暂时禁用
 - 开机最后的时候会闪8个苹果花屏，一会就没了
+
+## 更新历史
+
+### 20180822：
+
+1. 更新Lilu.kext到1.2.6版本。
+2. 引入WhateverGreen.kext，版本为1.2.1。
+3. 由于与WhateverGreen.kext功能重复，故移除IntelGraphicsFixup.kext, NvdiaGraphicsFixup.kext, Shiki.kext
+4. 更新config.plist适配WhateverGreen
+5. 根据AppleIntelKBLGraphicsFramebuffer驱动的内容，修正了config.plist中的补丁，虚拟显存调整为2048MB。但仍未解决花屏问题。
+
+### 20180821：
+
+- 更新clover版本到4644。
+- 可以记忆上回选择的系统，倒计时5秒自动进入。
+- 更正了启用触摸板禁用独显的配置文件的bug。
+- APFS.efi移除，直接使用新Clover中的APFSDriverLoader.efi
+
+### 20180815：
+
+- 添加NoTouchID驱动，10.13.6系统密码框不会出现卡顿
+
+### 20180813：
+
+- 触摸板已驱动, 正常可用。
+- 键盘的部分fn已经可以使用, 亮度调节会导致键盘失灵
+- 默认禁用内置蓝牙，是为了能够直接使用USB外置蓝牙，有蓝牙需求可以购买：黑苹果USB蓝牙适配器4.0免驱即插即用
+
+### 20180619（稳定版）：
+
+1. 触摸板：不能使用
+2. 键盘：不可以使用fn功能键, 否则键盘会失灵
+3. 内置WIFI：只有使用外接网卡解决
+4. 内置蓝牙：mac中无法搜索, 可以尝试从Windows中连上后重启到mac, 关机会失效。
+5. SD卡槽: 似乎无法驱动
+6. 1050Ti独显似乎无法驱动
