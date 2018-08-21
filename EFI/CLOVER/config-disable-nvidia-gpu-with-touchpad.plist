@@ -284,7 +284,7 @@
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>-lilubeta nv_disable=1 dart=0 kext-dev-mode=1 -disablegfxfirmware -igfxbeta</string>
+		<string>nv_disable=1 dart=0 kext-dev-mode=1 -disablegfxfirmware -wegbeta</string>
 		<key>Debug</key>
 		<false/>
 		<key>NeverHibernate</key>
@@ -535,7 +535,7 @@
 				<key>Comment</key>
 				<string>0x591b0000, 32MB BIOS, 19MB framebuffer 9MB cursor bytes (credit RehabMan)</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>
 				AABgAgAAUAE=
@@ -593,10 +593,10 @@
 				<key>Comment</key>
 				<string>Change VRAM 1536 -&gt; 2048 for 0x591b0000</string>
 				<key>Disabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>
-				AAAAYGwFAABsBQAAAAAA
+				AQMDAwAAYAIAAFABAAAAYA==
 				</data>
 				<key>InfoPlistPatch</key>
 				<false/>
@@ -604,7 +604,7 @@
 				<string>AppleIntelKBLGraphicsFramebuffer</string>
 				<key>Replace</key>
 				<data>
-				AAAAgGwFAABsBQAAAAAA
+				AQMDAwAAYAIAAFABAAAAgA==
 				</data>
 			</dict>
 			<dict>
