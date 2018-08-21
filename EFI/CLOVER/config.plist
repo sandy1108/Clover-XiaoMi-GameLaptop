@@ -24,6 +24,8 @@
 				<false/>
 				<key>FixTMR</key>
 				<false/>
+				<key>FixUSB</key>
+				<false/>
 			</dict>
 			<key>Name</key>
 			<string>DSDT.aml</string>
