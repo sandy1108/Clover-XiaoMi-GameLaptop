@@ -215,7 +215,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change PCI0.I2C0.TPD0._CSR to XCSR</string>
+					<string>change PCI0.I2C0.TPD0._CRS to XCRS</string>
 					<key>Disabled</key>
 					<true/>
 					<key>Find</key>
@@ -260,8 +260,8 @@
 		<key>DisabledAML</key>
 		<array>
 			<string>SSDT-DDGPU.aml</string>
-			<string>SSDT-I2C0.TPD0._CSR.aml</string>
 			<string>SSDT-UIAC-XiaoMiGameBookTop.aml</string>
+			<string>SSDT-I2C0.TPD0._CRS.aml</string>
 		</array>
 		<key>DropTables</key>
 		<array>
@@ -302,7 +302,7 @@
 			<string>SSDT-DDGPU.aml</string>
 			<string>SSDT-XOSI-XiaoMiGameBook-Windows10.aml</string>
 			<string>SSDT-GPI0._STA.aml</string>
-			<string>SSDT-I2C0.TPD0._CSR.aml</string>
+			<string>SSDT-I2C0.TPD0._CRS.aml</string>
 			<string>SSDT-UIAC-XiaoMiGameBookTop.aml</string>
 			<string>SSDT-UIAC-XiaoMiGameBookTop-DisableBluetooth.aml</string>
 			<string>SSDT-PNLF.aml</string>
