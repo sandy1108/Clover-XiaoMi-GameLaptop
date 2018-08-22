@@ -277,6 +277,8 @@
 		<string>nv_disable=1 dart=0 kext-dev-mode=1 -disablegfxfirmware -wegbeta</string>
 		<key>Debug</key>
 		<false/>
+		<key>DefaultVolume</key>
+		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>Secure</key>
