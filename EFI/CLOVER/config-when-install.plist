@@ -25,8 +25,6 @@
 				<key>FixTMR</key>
 				<false/>
 			</dict>
-			<key>Name</key>
-			<string>DSDT.aml</string>
 			<key>Patches</key>
 			<array>
 				<dict>
@@ -47,7 +45,7 @@
 					<key>Comment</key>
 					<string>change _OSI to XOSI</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					X09TSQ==
@@ -199,34 +197,6 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change PCI0.GPI0._STA to PCI0.GPI0.XSTA</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					X1NUQQCgCZNT
-					</data>
-					<key>Replace</key>
-					<data>
-					WFNUQQCgCZNT
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change PCI0.I2C0.TPD0._CSR to XCSR</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>
-					FDNfQ1JTAKAO
-					</data>
-					<key>Replace</key>
-					<data>
-					FDNYQ1JTAKAO
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>change _Q0F to XQ0F</string>
 					<key>Disabled</key>
 					<false/>
@@ -255,11 +225,6 @@
 				</dict>
 			</array>
 		</dict>
-		<key>DisabledAML</key>
-		<array>
-			<string>SSDT-I2C0.TPD0._CSR.aml</string>
-			<string>SSDT-UIAC-XiaoMiGameBookTop.aml</string>
-		</array>
 		<key>DropTables</key>
 		<array>
 			<dict>
@@ -297,11 +262,7 @@
 		<array>
 			<string>SSDT-RMCF.aml</string>
 			<string>SSDT-DDGPU.aml</string>
-			<string>SSDT-XOSI-XiaoMiGameBook-Windows10.aml</string>
-			<string>SSDT-GPI0._STA.aml</string>
-			<string>SSDT-I2C0.TPD0._CSR.aml</string>
 			<string>SSDT-UIAC-XiaoMiGameBookTop.aml</string>
-			<string>SSDT-UIAC-XiaoMiGameBookTop-DisableBluetooth.aml</string>
 			<string>SSDT-PNLF.aml</string>
 			<string>SSDT-FN-KEY-Brightness-PS2L.aml</string>
 			<string>SSDT-ALS0.aml</string>
@@ -432,7 +393,7 @@
 			<key>#Kaby Lake-Comment</key>
 			<string>To avoid automatic Clover fake device-id (Skylake) injection</string>
 			<key>IntelGFX</key>
-			<string>0x59168086</string>
+			<string>0x591b8086</string>
 		</dict>
 		<key>USB</key>
 		<dict>
@@ -740,7 +701,7 @@
 				<key>Comment</key>
 				<string>disable port limit in XHCI kext (credit PMHeart)</string>
 				<key>Disabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>
 				g32UDw+DlwQAAA==
@@ -748,7 +709,7 @@
 				<key>InfoPlistPatch</key>
 				<false/>
 				<key>MatchOS</key>
-				<string>10.13.4,10.13.5</string>
+				<string>10.13.x,10.14.x</string>
 				<key>Name</key>
 				<string>com.apple.driver.usb.AppleUSBXHCI</string>
 				<key>Replace</key>

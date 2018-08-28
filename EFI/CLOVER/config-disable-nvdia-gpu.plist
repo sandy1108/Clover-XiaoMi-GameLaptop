@@ -195,6 +195,34 @@
 					SUdQVQhfQURSDAAAAgA=
 					</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change _Q0F to XQ0F</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X1EwRg==
+					</data>
+					<key>Replace</key>
+					<data>
+					WFEwRg==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change _Q10 to XQ10</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X1ExMA==
+					</data>
+					<key>Replace</key>
+					<data>
+					WFExMA==
+					</data>
+				</dict>
 			</array>
 		</dict>
 		<key>DropTables</key>
@@ -236,6 +264,7 @@
 			<string>SSDT-DDGPU.aml</string>
 			<string>SSDT-UIAC-XiaoMiGameBookTop.aml</string>
 			<string>SSDT-PNLF.aml</string>
+			<string>SSDT-FN-KEY-Brightness-PS2L.aml</string>
 			<string>SSDT-ALS0.aml</string>
 			<string>SSDT-CPUS.aml</string>
 		</array>
@@ -245,9 +274,11 @@
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>-igfxbeta nv_disable=1 dart=0 kext-dev-mode=1 -disablegfxfirmware -lilubeta</string>
+		<string>nv_disable=1 dart=0 kext-dev-mode=1 -disablegfxfirmware -wegbeta</string>
 		<key>Debug</key>
 		<false/>
+		<key>DefaultVolume</key>
+		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>Secure</key>
@@ -554,24 +585,6 @@
 				<key>Comment</key>
 				<string>Change VRAM 1536 -&gt; 2048 for 0x591b0000</string>
 				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				AAAAYGwFAABsBQAAAAAA
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>AppleIntelKBLGraphicsFramebuffer</string>
-				<key>Replace</key>
-				<data>
-				AAAAgGwFAABsBQAAAAAA
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>1536MB -&gt; 2048MB for HD630 Mobile</string>
-				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
 				<data>
@@ -724,8 +737,6 @@
 	<dict>
 		<key>InjectKexts</key>
 		<string>Detect</string>
-		<key>NvidiaWeb</key>
-		<false/>
 	</dict>
 </dict>
 </plist>
