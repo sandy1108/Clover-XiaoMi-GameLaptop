@@ -15,6 +15,10 @@
 // portType=2 seems to indicate "internal device" (as seen in MacBookPro8,1)
 // portType=4 is used by MacBookPro8,3 (reason/purpose unknown)
 //
+// UsbConnector:
+// Common port connector types are USB2 = 0, USB3 = 3, internal = 255.
+// HSxx ports that are connected to a USB3 port should be marked UsbConnector=3, not UsbConnector=0.
+//
 
 // SSDT-UIAC-XiaoMiGameBookTop.dsl
 //

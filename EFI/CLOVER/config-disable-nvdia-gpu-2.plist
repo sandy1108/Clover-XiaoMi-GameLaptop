@@ -28,7 +28,7 @@
 				<false/>
 			</dict>
 			<key>Name</key>
-			<string>DSDT.aml</string>
+			<string>DSDT2.aml</string>
 			<key>Patches</key>
 			<array>
 				<dict>
@@ -201,34 +201,6 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change PCI0.GPI0._STA to PCI0.GPI0.XSTA</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					X1NUQQCgCZNT
-					</data>
-					<key>Replace</key>
-					<data>
-					WFNUQQCgCZNT
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change PCI0.I2C0.TPD0._CRS to XCRS</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>
-					FDNfQ1JTAKAO
-					</data>
-					<key>Replace</key>
-					<data>
-					FDNYQ1JTAKAO
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>change _Q0F to XQ0F</string>
 					<key>Disabled</key>
 					<false/>
@@ -259,7 +231,6 @@
 		</dict>
 		<key>DisabledAML</key>
 		<array>
-			<string>SSDT-DDGPU.aml</string>
 			<string>SSDT-UIAC-XiaoMiGameBookTop.aml</string>
 		</array>
 		<key>DropTables</key>
@@ -300,8 +271,6 @@
 			<string>SSDT-RMCF.aml</string>
 			<string>SSDT-DDGPU.aml</string>
 			<string>SSDT-XOSI-XiaoMiGameBook-Windows10.aml</string>
-			<string>SSDT-GPI0._STA.aml</string>
-			<string>SSDT-I2C0.TPD0._CRS.aml</string>
 			<string>SSDT-UIAC-XiaoMiGameBookTop.aml</string>
 			<string>SSDT-UIAC-XiaoMiGameBookTop-DisableBluetooth.aml</string>
 			<string>SSDT-PNLF.aml</string>
@@ -315,7 +284,7 @@
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>dart=0 nvda_drv=1 kext-dev-mode=1 -wegbeta -lilubetaall</string>
+		<string>nv_disable=1 dart=0 kext-dev-mode=1 -wegbeta -lilubetaall</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
@@ -442,8 +411,8 @@
 	</dict>
 	<key>DisableDrivers</key>
 	<array>
-		<string>CsmVideoDxe</string>
 		<string>VBoxHfs</string>
+		<string>CsmVideoDxe</string>
 	</array>
 	<key>GUI</key>
 	<dict>
@@ -814,8 +783,6 @@
 	<dict>
 		<key>InjectKexts</key>
 		<string>Detect</string>
-		<key>NvidiaWeb</key>
-		<true/>
 	</dict>
 </dict>
 </plist>
