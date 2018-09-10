@@ -58,6 +58,11 @@ DefinitionBlock ("", "SSDT", 2, "hack", "UIAC-ALL", 0)
                         "UsbConnector", 255,
                         "port", Buffer() { 6, 0, 0, 0 },
                     },
+                    "HS08", Package() // Type-C USB-hub 2.0 under the screen
+                    {
+                        "UsbConnector", 3,
+                        "port", Buffer() { 8, 0, 0, 0 },
+                    },
                     "HS09", Package() // USB2.0-CRW
                     {
                         "UsbConnector", 255,
@@ -87,6 +92,11 @@ DefinitionBlock ("", "SSDT", 2, "hack", "UIAC-ALL", 0)
                     {
                         "UsbConnector", 3,
                         "port", Buffer() { 20, 0, 0, 0 },
+                    },
+                    "SS05", Package() // Type-C USB-hub USB3.0 under the screen
+                    {
+                        "UsbConnector", 3,
+                        "port", Buffer() { 21, 0, 0, 0 },
                     },
                 },
             },
