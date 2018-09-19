@@ -772,6 +772,26 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>USB 10.13.6 by PMHeart </string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				g32IDw+DpwQ=
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>MatchOS</key>
+				<string>10.13.6</string>
+				<key>Name</key>
+				<string>com.apple.driver.usb.AppleUSBXHCI</string>
+				<key>Replace</key>
+				<data>
+				g32IGw+DpwQ=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>USB Port limit patch 10.14 (credits FredWst)</string>
 				<key>Disabled</key>
 				<true/>
