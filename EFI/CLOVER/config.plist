@@ -315,7 +315,7 @@
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>dart=0 -alcbeta nvda_drv=1 -lilubetaall -wegbeta kext-dev-mode=1 -lilubeta</string>
+		<string>dart=0 -alcbeta -hbfxbeta nvda_drv=1 -lilubetaall -wegbeta kext-dev-mode=1 -lilubeta</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
