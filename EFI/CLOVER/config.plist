@@ -549,6 +549,22 @@
 				ILniAAAAkJA=
 				</data>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Disable panic kext logging on 10.14</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				igKEwHRC
+				</data>
+				<key>MatchOS</key>
+				<string>10.14,10.14.x</string>
+				<key>Replace</key>
+				<data>
+				igKEwOtC
+				</data>
+			</dict>
 		</array>
 		<key>KextsToPatch</key>
 		<array>
