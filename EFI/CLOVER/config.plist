@@ -257,11 +257,6 @@
 				</dict>
 			</array>
 		</dict>
-		<key>DisabledAML</key>
-		<array>
-			<string>SSDT-DDGPU.aml</string>
-			<string>SSDT-UIAC-XiaoMiGameBookTop.aml</string>
-		</array>
 		<key>DropTables</key>
 		<array>
 			<dict>
@@ -295,27 +290,13 @@
 			<key>NoOemTableId</key>
 			<true/>
 		</dict>
-		<key>SortedOrder</key>
-		<array>
-			<string>SSDT-RMCF.aml</string>
-			<string>SSDT-DDGPU.aml</string>
-			<string>SSDT-XOSI-XiaoMiGameBook-Windows10.aml</string>
-			<string>SSDT-GPI0._STA.aml</string>
-			<string>SSDT-I2C0.TPD0._CRS.aml</string>
-			<string>SSDT-UIAC-XiaoMiGameBookTop.aml</string>
-			<string>SSDT-UIAC-XiaoMiGameBookTop-DisableBluetooth.aml</string>
-			<string>SSDT-PNLF.aml</string>
-			<string>SSDT-FN-KEY-Brightness-PS2L.aml</string>
-			<string>SSDT-ALS0.aml</string>
-			<string>SSDT-CPUS.aml</string>
-		</array>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>dart=0 -alcbeta nvda_drv=1 -lilubetaall -wegbeta kext-dev-mode=1 -lilubeta</string>
+		<string>dart=0 kext-dev-mode=1 -disablegfxfirmware -lilubetaall -alcbeta</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
@@ -381,10 +362,8 @@
 		</array>
 		<key>Audio</key>
 		<dict>
-			<key>Inject</key>
-			<integer>2</integer>
 			<key>ResetHDA</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>FakeID</key>
 		<dict>
@@ -410,6 +389,22 @@
 				<data>
 				G1kAAA==
 				</data>
+				<key>disable-external-gpu</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>enable-hdmi20</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-con2-enable</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-con2-index</key>
+				<data>
+				/////w==
+				</data>
 				<key>framebuffer-fbmem</key>
 				<data>
 				AACQAA==
@@ -417,6 +412,10 @@
 				<key>framebuffer-patch-enable</key>
 				<data>
 				AQAAAA==
+				</data>
+				<key>framebuffer-portcount</key>
+				<data>
+				AgAAAA==
 				</data>
 				<key>framebuffer-stolenmem</key>
 				<data>
@@ -442,8 +441,8 @@
 	</dict>
 	<key>DisableDrivers</key>
 	<array>
-		<string>CsmVideoDxe</string>
 		<string>VBoxHfs</string>
+		<string>CsmVideoDxe</string>
 	</array>
 	<key>GUI</key>
 	<dict>
@@ -480,6 +479,7 @@
 		<key>Hide</key>
 		<array>
 			<string>Preboot</string>
+			<string>Recovery</string>
 		</array>
 		<key>Mouse</key>
 		<dict>
@@ -506,8 +506,19 @@
 	<dict>
 		<key>EDID</key>
 		<dict>
+			<key>Custom</key>
+			<data>
+			AP///////wA4cCgAAAAAACsbAQSlIhN4AkvVpFZSpyUNUFQAAAAB
+			AQEBAQEBAQEBAQEBAQEBKTaAoHA4H0AwIDUAWMIQAAAYVCuAoHA4
+			H0AwIDUAWMIQAAAYAAAAEAAAAAAAAAAAAAAAAAAAAAAA/ABMTTE1
+			NkxGOUwwMQogAAE=
+			</data>
 			<key>Inject</key>
-			<false/>
+			<true/>
+			<key>ProductID</key>
+			<string>0x28</string>
+			<key>VendorID</key>
+			<string>0x03870</string>
 		</dict>
 		<key>Inject</key>
 		<dict>
@@ -602,90 +613,6 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>0x591b0000, 32MB BIOS, 19MB framebuffer 9MB cursor bytes (credit RehabMan)</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				AABgAgAAUAE=
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>MatchOS</key>
-				<string>10.13,10.13.x</string>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelKBLGraphicsFramebuffer</string>
-				<key>Replace</key>
-				<data>
-				AAAwAQAAkAA=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>0x591b0000, 0105 instead of 0306, HDMI</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				AgQKAAAIAACHAQAAAwYKAAAEAACHAQAA/wAAAAEAAAAg
-				AAAA
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>MatchOS</key>
-				<string>10.13,10.13.x</string>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelKBLGraphicsFramebuffer</string>
-				<key>Replace</key>
-				<data>
-				AQUKAAAIAACHAQAAAgQKAAAIAACHAQAA/wAAAAEAAAAg
-				AAAA
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>0x591b0000, 0105 instead of 0204, HDMI</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				AgQKAAAIAACHAQAAAwYKAAAEAACHAQAA/wAAAAEAAAAg
-				AAAA
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>MatchOS</key>
-				<string>10.13,10.13.x</string>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelKBLGraphicsFramebuffer</string>
-				<key>Replace</key>
-				<data>
-				AQUKAAAIAACHAQAAAwYKAAAEAACHAQAA/wAAAAEAAAAg
-				AAAA
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Change VRAM 1536 -&gt; 2048 for 0x591b0000</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				AQMDAwAAYAIAAFABAAAAYA==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>MatchOS</key>
-				<string>10.13,10.13.x</string>
-				<key>Name</key>
-				<string>AppleIntelKBLGraphicsFramebuffer</string>
-				<key>Replace</key>
-				<data>
-				AQMDAwAAYAIAAFABAAAAgA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>change F%uT%04x to F%uTxxxx in AppleBacklightInjector.kext (credit RehabMan)</string>
 				<key>Disabled</key>
 				<false/>
@@ -700,106 +627,6 @@
 				<key>Replace</key>
 				<data>
 				RiV1VHh4eHgA
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>change 15 port limit to 26 in XHCI kext</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				g72M/v//EA==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>MatchOS</key>
-				<string>10.11.x</string>
-				<key>Name</key>
-				<string>com.apple.driver.usb.AppleUSBXHCIPCI</string>
-				<key>Replace</key>
-				<data>
-				g72M/v//Gw==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>change 15 port limit to 26 in XHCI kext</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				g710////EA==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>MatchOS</key>
-				<string>10.12.x</string>
-				<key>Name</key>
-				<string>com.apple.driver.usb.AppleUSBXHCIPCI</string>
-				<key>Replace</key>
-				<data>
-				g710////Gw==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>change 15 port limit to 26 in XHCI kext</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				g32MEA==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>MatchOS</key>
-				<string>10.13.0,10.13.1,10.13.2,10.13.3</string>
-				<key>Name</key>
-				<string>com.apple.driver.usb.AppleUSBXHCIPCI</string>
-				<key>Replace</key>
-				<data>
-				g32MGw==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>change 15 port limit to 26 in XHCI kext (credit FredWst)</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				g32UDw+DlwQ=
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>MatchOS</key>
-				<string>10.13.4,10.13.5</string>
-				<key>Name</key>
-				<string>com.apple.driver.usb.AppleUSBXHCI</string>
-				<key>Replace</key>
-				<data>
-				g32UGg+DlwQ=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>disable port limit in XHCI kext (credit PMHeart)</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				g32UDw+DlwQAAA==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>MatchOS</key>
-				<string>10.13.4,10.13.5</string>
-				<key>Name</key>
-				<string>com.apple.driver.usb.AppleUSBXHCI</string>
-				<key>Replace</key>
-				<data>
-				g32UD5CQkJCQkA==
 				</data>
 			</dict>
 			<dict>
@@ -860,6 +687,26 @@
 				<key>Replace</key>
 				<data>
 				AQMDAwAAMAEAAJAA
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>disable port limit in XHCI kext (credit PMHeart)</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				g/sPD4MDBQAA
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>MatchOS</key>
+				<string>10.14.x</string>
+				<key>Name</key>
+				<string>com.apple.driver.usb.AppleUSBXHCI</string>
+				<key>Replace</key>
+				<data>
+				g/sPkJCQkJCQ
 				</data>
 			</dict>
 		</array>
